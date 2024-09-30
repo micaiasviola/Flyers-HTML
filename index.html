@@ -8,18 +8,22 @@
     <script src="script.js" defer></script>
 </head>
 <body>
+    <div class="image-container"></div> <!-- Div para imagens de fundo -->
     <div class="flyer-container">
-        <h1>Welcome to Our Business!</h1>
-        <p>We offer the best services to help you achieve success.</p>
+        <h1>Bem Vindo!</h1>
+        <p style="color:white; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Felipo Pedote Socials</p>
 
         <div class="contact-section">
             <div class="button-container">
-                <button onclick="redirectToWhatsApp()">Contact Us on WhatsApp</button>
+                <button id="whatsapp" onclick="redirectToWhatsApp()">
+                    <img src="./imgs/wicon.svg" alt="WhatsApp" width="24" height="24" style="margin-right: 50px;" />
+                    WhatsApp
+                </button>
             </div>
             <div class="button-container">
-                <button onclick="redirectToWebsite()">Visit Our Website</button>
+                <button id="instagram" onclick="redirectToWebsite()"><img src="./imgs/instaicon.svg" alt="Instagram" width="24" height="24" style="margin-right: 50px;">Instagram</button>
             </div>
-            <p>Company Phone: <span id="company-phone">+1 (123) 456-7890</span></p>
+            <p>Telefone para contato: <span id="company-phone">+55 12 98856-0649</span></p>
         </div>
     </div>
 </body>

@@ -6,22 +6,37 @@
 }
 
 body {
-    background: linear-gradient(to right, #808080, #800080);/* efeito de gradiente*/
-    height: 100vh;/*garante que cubra toda a tela*/
-    display: flex; /*responsividade*/
+    height: 100vh; /* garante que cubra toda a tela */
+    display: flex; /* responsividade */
     justify-content: center;
     align-items: center;
-    transition: background-image 1s ease-in-out;
+    overflow: hidden; /* evita rolagem */
+    
+    position: relative; /* para posicionar a imagem corretamente */
+}
+
+.image-container {
+    position: absolute; /* para que fique atrás do flyer */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover; /* faz a imagem cobrir toda a área */
+    background-position: center; /* centraliza a imagem */
+    transition: background-image 1s ease-in-out; /* suaviza a transição */
+    z-index: -1; /* fica atrás do conteúdo */
 }
 
 .flyer-container {
+
     max-width: 600px;
     margin: 50px auto;
     padding: 20px;
-    
     border-radius: 8px;
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
+    background-color: rgba(110, 103, 103, 0.5); /* Fundo semi-transparente */
+    
 }
 
 h1 {
@@ -30,36 +45,60 @@ h1 {
 }
 
 p {
-    font-size: 18px;
+    font-size: 24px;
     margin: 20px 0;
     color: #e0e0e0;
+   /* background-color: rgba(110, 103, 103, 0.5); /* Fundo semi-transparente
+    padding: 0px; /* Espaçamento interno 
+    border-radius: 5px; */
 }
+
 
 .contact-section {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    
 }
 
 .button-container {
     width: 100%;
     display: flex;
     justify-content: center;
+    
 }
 
 button {
-    background-color: #6a0dad; /* Um roxo que combina com o fundo */
+    display: flex;
+    align-items: center;
+    background-color: #25D366; /* Cor do WhatsApp */
     color: white;
     padding: 12px 20px;
+    font-size: 16px;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
+    text-decoration: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    width: 100%;
-    max-width: 300px;
 }
+#whatsapp{
+    background-color: #25D366; /* Cor do botão Instagram */
+    color: white; /* Cor do texto */
+}
+#whatsapp:hover{
+    background-color: #0af558; /* Cor ao passar o mouse */
+
+}
+#instagram {
+    background-color: #C13584; /* Cor do botão Instagram */
+    color: white; /* Cor do texto */
+}
+
+#instagram:hover {
+    background-color: #f50a59; /* Cor ao passar o mouse */
+}
+
 
 button:hover {
     background-color: #5a0c8c;

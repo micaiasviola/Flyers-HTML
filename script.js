@@ -1,6 +1,6 @@
 function redirectToWhatsApp() {
-    const phoneNumber = "+12988632917";  // Replace with the correct number
-    const message = "Hello, I would like more information about your services.";
+    const phoneNumber = "+12988560649";  // Replace with the correct number
+    const message = "Olá, gostaria de fazer um orçamento!";
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
 }
@@ -12,14 +12,15 @@ function redirectToWebsite() {
 
 const images = [
     'url("./imgs/imagem1.jpg")',
-    'url("./imgs/imagem2.jpg")', // Adicione o caminho correto
-    'url("./imgs/imagem3.jpg")'  // Adicione o caminho correto
+    'url("./imgs/imagem2.jpg")',
+    'url("./imgs/imagem3.jpg")'
 ];
 
 let currentIndex = 0;
 
 function changeBackground() {
-    document.body.style.backgroundImage = images[currentIndex];
+    const imageContainer = document.querySelector('.image-container');
+    imageContainer.style.backgroundImage = images[currentIndex];
     currentIndex = (currentIndex + 1) % images.length;
 }
 
@@ -28,3 +29,4 @@ setInterval(changeBackground, 5000);
 
 // Inicializa com a primeira imagem
 changeBackground();
+

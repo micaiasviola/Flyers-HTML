@@ -6,7 +6,7 @@ function redirectToWhatsApp() {
 }
 
 function redirectToWebsite() {
-    const websiteUrl = "www.instagram.com/felipobalistrieri?igsh=MTdvcjU0OHlnNWt4Mg==.com";  // Replace with the correct URL
+    const websiteUrl = "https://www.instagram.com/felipobalistrieri?igsh=MTdvcjU0OHlnNWt4Mg==.com";  // Replace with the correct URL
     window.open(websiteUrl, '_blank');
 }
 

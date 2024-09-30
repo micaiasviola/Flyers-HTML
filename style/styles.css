@@ -11,6 +11,7 @@ body {
     display: flex; /*responsividade*/
     justify-content: center;
     align-items: center;
+    transition: background-image 1s ease-in-out;
 }
 
 .flyer-container {

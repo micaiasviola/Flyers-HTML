@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #808080, #800080);/* efeito de gradiente*/
+    height: 100vh;/*garante que cubra toda a tela*/
+    display: flex; /*responsividade*/
+    justify-content: center;
+    align-items: center;
+}
+
+.flyer-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    
+    border-radius: 8px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    color: #f0f0f0;
+}
+
+p {
+    font-size: 18px;
+    margin: 20px 0;
+    color: #e0e0e0;
+}
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    background-color: #6a0dad; /* Um roxo que combina com o fundo */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+}
+
+button:hover {
+    background-color: #5a0c8c;
+}
+
+#company-phone {
+    font-weight: bold;
+    font-size: 18px;
+    color: #f0f0f0;
+}

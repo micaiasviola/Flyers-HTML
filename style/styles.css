@@ -12,7 +12,6 @@ body {
     justify-content: center;
     align-items: center;
     overflow: visible;
-    margin: 0;
     background: linear-gradient(135deg, rgba(255, 0, 150, 0.7), rgba(0, 204, 255, 0.7));
     background-size: 100% 100%;
     background-attachment: fixed;
@@ -30,7 +29,7 @@ body {
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
     text-align: center;
-    padding: inherit;
+    padding: 10px;
     z-index: 10;
 }
 
@@ -38,13 +37,15 @@ body {
     font-family: "Great Vibes", cursive;
     font-weight: 400;
     color: #1a1a1a;
-    font-size: 50px;
+    font-size: 2.5rem;
+    /* Aumentado para uma melhor legibilidade */
     text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ffcc00;
 }
 
 .flyer-container {
     max-width: 90%;
-    width: 600px;
+    width: 90%;
+    /* Alterado para responsividade */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
@@ -66,17 +67,18 @@ body {
     align-items: center;
     background-color: rgba(141, 130, 130, 0.5);
     width: 90%;
-    height: 50%;
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
-    padding: auto;
+    padding: 20px;
+    /* Alterado para um valor fixo */
 }
 
 .carousel {
     position: relative;
     width: 100%;
     overflow: hidden;
-    height: 50%;
+    height: auto;
+    /* Alterado para permitir altura automática */
     margin-bottom: 100px;
 }
 
@@ -89,10 +91,10 @@ body {
 
 .carousel-images img {
     width: 100%;
-    max-width: 100%;
     height: auto;
     object-fit: cover;
-    display: flex;
+    display: block;
+    /* Alterado para block para evitar espaços indesejados */
     transition: transform 0.5s ease;
 }
 
@@ -149,7 +151,6 @@ button {
     font-size: 1rem;
     border: none;
     border-radius: 8px;
-    text-decoration: none;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s;
     margin: 5px;
@@ -189,36 +190,36 @@ button:hover {
     width: 100%;
     display: flex;
     justify-content: center;
-    height: 500px;
+    flex-wrap: wrap;
+    /* Para que os itens quebrem em linha */
     gap: 10px;
 }
 
 .container>div {
-    flex: 0 0 120px;
+    flex: 1 1 120px;
+    /* Permite que os itens sejam flexíveis */
     border-radius: 0.5rem;
     transition: 0.5s ease-in-out;
     cursor: pointer;
     box-shadow: 1px 5px 15px #1e0e3e;
     position: relative;
     overflow: hidden;
-    opacity: 1;
-    /* Certifique-se de que esteja definido para 1 ou um valor maior */
 }
 
 .container>div:nth-of-type(1) {
-    background: url("../imgs/imagem1.jpg") no-repeat 50% / cover;
+    background: url("../imgs/imagem1.jpg") no-repeat center center / cover;
 }
 
 .container>div:nth-of-type(2) {
-    background: url("../imgs/imagem2.jpg") no-repeat 50% / cover;
+    background: url("../imgs/imagem2.jpg") no-repeat center center / cover;
 }
 
 .container>div:nth-of-type(3) {
-    background: url("../imgs/imagem3.jpg") no-repeat 50% / cover;
+    background: url("../imgs/imagem3.jpg") no-repeat center center / cover;
 }
 
 .container>div:nth-of-type(4) {
-    background: url("../imgs/imagem4.jpg") no-repeat 50% / cover;
+    background: url("../imgs/imagem4.jpg") no-repeat center center / cover;
 }
 
 .content {
@@ -245,7 +246,8 @@ button:hover {
 }
 
 .container>div:hover {
-    flex: 0 0 250px;
+    flex: 1 1 250px;
+    /* Flexibilidade ao passar o mouse */
     box-shadow: 1px 3px 15px #7645d8;
     transform: translateY(-30px);
 }
@@ -256,202 +258,7 @@ button:hover {
     visibility: visible;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: visible;
-    margin: 0;
-    background: linear-gradient(135deg, rgba(255, 0, 150, 0.7), rgba(0, 204, 255, 0.7));
-    background-size: 100% 100%;
-    background-attachment: fixed;
-    flex-direction: column;
-    gap: 20px;
-    min-height: 100vh;
-}
-
-.footer {
-    position: fixed;
-    /* Fixa o rodapé na tela */
-    bottom: 0;
-    /* Alinha na parte inferior */
-    left: 0;
-    /* Alinha à esquerda */
-    width: 100%;
-    /* Faz o rodapé ocupar toda a largura */
-    background-color: rgba(0, 0, 0, 0.8);
-    /* Cor de fundo semi-transparente */
-    color: white;
-    /* Cor do texto */
-    text-align: center;
-    /* Centraliza o texto */
-    padding: inherit;
-    /* Espaçamento interno */
-    z-index: 10;
-    /* Garante que o rodapé fique acima de outros elementos */
-
-}
-
-.felipo {
-    font-family: "Great Vibes", cursive;
-    font-weight: 400;
-    color: #1a1a1a;
-    font-size: 50px;
-    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ffcc00;
-}
-
-.flyer-container {
-    max-width: 90%;
-    width: 600px;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
-    margin-top: 30px;
-    text-align: center;
-    background-color: rgba(110, 103, 103, 0.5);
-}
-
-.contact-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-
-.about-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: none;
-    width: 90%;
-    height: 50%;
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 20vh;
-}
-
-/* .carousel {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    height: 50%;
-    margin-bottom: 100px;
-}
-
-.carousel-images {
-    display: flex;
-    justify-content: center;  Centraliza as imagens 
-    align-items: center;
-    transition: transform 0.5s ease;
-}
-
-.carousel-images img {
-    width: 100%;
-
-    max-width: 100%;
-    height: auto; /* Mantém a proporção da imagem 
-    object-fit: cover; /* Alternativas: contain, fill, none, scale-down 
-
-    display: flex;
-    transition: transform 0.5s ease;
-}
-
-.carousel button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.7);
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    z-index: 1;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
-} */
-
-.button-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-h1 {
-    font-size: 2rem;
-    color: #f0f0f0;
-}
-
-p {
-    font-size: 1.5rem;
-    margin: 20px 0;
-    color: #e0e0e0;
-}
-
-button {
-    display: flex;
-    align-items: center;
-    background-color: #25D366;
-    justify-content: center;
-    color: white;
-    padding: 12px 20px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 8px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s;
-    margin: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    width: 100%;
-}
-
-button img {
-    margin-right: 10px;
-    width: 24px;
-    height: 24px;
-}
-
-button:hover {
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
-}
-
-#orcamento {
-    background-color: #333;
-}
-
-#whatsapp {
-    background-color: #25D366;
-}
-
-#instagram {
-    background-color: #C13584;
-}
-
-#orcamento:hover,
-#whatsapp:hover,
-#instagram:hover {
-    transform: translateY(-2px);
-}
-
+/* Estilos Responsivos */
 @media (max-width: 768px) {
     h1 {
         font-size: 1.8rem;
@@ -473,6 +280,26 @@ button:hover {
     }
 }
 
+/* Estilos específicos para dispositivos móveis */
+@media (max-width: 768px) {
+    .flyer-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+    
+    p {
+        font-size: 1.2rem;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+    }
+}
 @media (max-width: 480px) {
     h1 {
         font-size: 1.5rem;
@@ -485,5 +312,24 @@ button:hover {
     button {
         width: 100%;
         margin: 5px 0;
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .felipo {
+        font-size: 1.8rem;
+        /* Diminuído para telas pequenas */
+    }
+
+    .footer {
+        padding: 5px;
+        /* Ajuste no espaçamento do rodapé */
+    }
+
+    .container>div {
+        flex: 1 1 100%;
+        /* Cada div ocupa 100% em telas pequenas */
+        margin-bottom: 10px;
+        /* Espaçamento inferior */
     }
 }

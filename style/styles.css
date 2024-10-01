@@ -201,22 +201,24 @@ button:hover {
     box-shadow: 1px 5px 15px #1e0e3e;
     position: relative;
     overflow: hidden;
+    opacity: 1;
+    /* Certifique-se de que esteja definido para 1 ou um valor maior */
 }
 
 .container>div:nth-of-type(1) {
-    background: url("https://images.pexels.com/photos/1845208/pexels-photo-1845208.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") no-repeat 50% / cover;
+    background: url("../imgs/imagem1.jpg") no-repeat 50% / cover;
 }
 
 .container>div:nth-of-type(2) {
-    background: url("https://images.pexels.com/photos/36469/woman-person-flowers-wreaths.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") no-repeat 50% / cover;
+    background: url("../imgs/imagem2.jpg") no-repeat 50% / cover;
 }
 
 .container>div:nth-of-type(3) {
-    background: url("https://images.pexels.com/photos/1468379/pexels-photo-1468379.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") no-repeat 50% / cover;
+    background: url("../imgs/imagem3.jpg") no-repeat 50% / cover;
 }
 
 .container>div:nth-of-type(4) {
-    background: url("https://images.pexels.com/photos/247322/pexels-photo-247322.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") no-repeat 50% / cover;
+    background: url("../imgs/imagem4.jpg") no-repeat 50% / cover;
 }
 
 .content {

@@ -6,16 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Business Flyer</title>
     <link rel="stylesheet" href="./style/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Sixtyfour+Convergence&display=swap"
+        rel="stylesheet">
     <script src="script.js" defer></script>
 </head>
 
 <body>
     <div class="image-container"></div> <!-- Div para imagens de fundo -->
     <div class="flyer-container">
-        <h1>Bem Vindo!</h1>
-        <p
-            style="color:white; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
-            Felipo Pedote Socials</p>
+
+        <p class="felipo">Felipo Pedote Socials</p>
 
         <div class="contact-section">
             <div class="button-container">
@@ -28,8 +30,17 @@
                 <button id="instagram" onclick="redirectToWebsite()"><img src="./imgs/instaicon.svg" alt="Instagram"
                         width="24" height="24" style="margin-right: 50px;">Instagram</button>
             </div>
-            <p>Telefone para contato: <span id="company-phone">+55 12 98856-0649</span></p>
+            <div class="button-container"></div>
+            <button id="orcamento" onclick="redirectToWebsite()"><img src="./imgs/dollar_sign.svg" alt="Instagram"
+                    width="24" height="24" style="margin-right: 50px;">Orçamentos</button>
         </div>
+
+
+    </div>
+
+    </div>
+    <div class="about-container">
+        <h1>Sobre</h1>
     </div>
 </body>
 

@@ -207,19 +207,19 @@ button:hover {
 }
 
 .container>div:nth-of-type(1) {
-    background: url("../imgs/imagem1.jpg") no-repeat center center / cover;
+    background: url("../imgs/img3.png") no-repeat center center / cover;
 }
 
 .container>div:nth-of-type(2) {
-    background: url("../imgs/imagem2.jpg") no-repeat center center / cover;
+    background: url("../imgs/img2.png") no-repeat center center / cover;
 }
 
 .container>div:nth-of-type(3) {
-    background: url("../imgs/imagem3.jpg") no-repeat center center / cover;
+    background: url("../imgs/img4.png") no-repeat center center / cover;
 }
 
 .container>div:nth-of-type(4) {
-    background: url("../imgs/imagem4.jpg") no-repeat center center / cover;
+    background: url("../imgs/img1.png") no-repeat center center / cover;
 }
 
 .content {

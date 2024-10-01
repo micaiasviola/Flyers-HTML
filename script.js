@@ -1,32 +1,35 @@
 function redirectToWhatsApp() {
-    const phoneNumber = "+12988560649";  // Replace with the correct number
+    const phoneNumber = "+12988560649"; // Substitua pelo número correto
     const message = "Olá, gostaria de fazer um orçamento!";
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
 }
 
 function redirectToWebsite() {
-    const websiteUrl = "https://www.instagram.com/felipobalistrieri?igsh=MTdvcjU0OHlnNWt4Mg==.com";  // Replace with the correct URL
+    const websiteUrl = "https://www.instagram.com/felipobalistrieri"; // URL corrigida
     window.open(websiteUrl, '_blank');
 }
 
-const images = [
-    'url("./imgs/imagem1.jpg")',
-    'url("./imgs/imagem2.jpg")',
-    'url("./imgs/imagem3.jpg")'
-];
+let currentSlide = 0;
 
-let currentIndex = 0;
+function moveSlide(direction) {
+    const slides = document.querySelectorAll('.carousel-images img');
+    const totalSlides = slides.length;
 
-function changeBackground() {
-    const imageContainer = document.querySelector('.image-container');
-    imageContainer.style.backgroundImage = images[currentIndex];
-    currentIndex = (currentIndex + 1) % images.length;
+    currentSlide += direction;
+
+    if (currentSlide < 0) {
+        currentSlide = totalSlides - 1;
+    } else if (currentSlide >= totalSlides) {
+        currentSlide = 0;
+    }
+
+    const offset = -currentSlide * 100; 
+    document.querySelector('.carousel-images').style.transform = `translateX(${offset}%)`;
 }
 
-// Troca de imagem a cada 5 segundos
-setInterval(changeBackground, 5000);
-
-// Inicializa com a primeira imagem
-changeBackground();
-
+// Adicionando event listeners aos botões após o carregamento do DOM
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('.prev').addEventListener('click', () => moveSlide(-1));
+    document.querySelector('.next').addEventListener('click', () => moveSlide(1));
+});

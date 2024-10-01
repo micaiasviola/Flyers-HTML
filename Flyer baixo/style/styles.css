@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+
+    /* garante que cubra toda a tela */
+    display: flex;
+    /* responsividade */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* evita rolagem */
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    /* para posicionar a imagem corretamente */
+}
+
+.felipo {
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #1a1a1a;
+    /* Cor base do texto */
+    font-size: 50px;
+    text-shadow:
+        0 0 5px #ffffff,
+        /* Brilho sutil */
+        0 0 10px #ffffff,
+        /* Brilho mais intenso */
+        0 0 15px #ffcc00;
+    /* Brilho da cor desejada (dourado) */
+
+}
+
+.image-container {
+    position: absolute;
+    /* para que fique atrás do flyer */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    /* faz a imagem cobrir toda a área */
+    background-position: center;
+    /* centraliza a imagem */
+    transition: background-image 1s ease-in-out;
+    /* suaviza a transição */
+    z-index: -1;
+    /* fica atrás do conteúdo */
+}
+
+.flyer-container {
+    max-width: 90%;
+    /* largura responsiva */
+    width: 600px;
+    /* largura máxima */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: rgba(110, 103, 103, 0.5);
+    /* Fundo semi-transparente */
+}
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: rgba(144, 15, 15, 0.5);
+    width: 90%;
+    /* largura responsiva */
+    margin: 20px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* permite que os botões se movam em linhas diferentes se necessário */
+}
+
+h1 {
+    font-size: 2rem;
+    /* tamanho relativo */
+    color: #f0f0f0;
+}
+
+p {
+    font-size: 1.5rem;
+    /* tamanho relativo */
+    margin: 20px 0;
+    color: #e0e0e0;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    background-color: #25D366;
+    justify-content: center;
+    /* Espaça os itens ao máximo */
+
+    /* Cor do WhatsApp */
+    color: white;
+    padding: 12px 20px;
+    font-size: 1rem;
+    /* tamanho relativo */
+    border: none;
+    border-radius: 8px;
+    /* Bordas arredondadas */
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    /* Efeito de transformação no hover */
+    margin: 5px;
+    /* adiciona margem para espaçamento entre os botões */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    /* Sombreamento */
+}
+
+button img {
+    margin-right: 50px;
+    width: 24px;
+    height: 24px;
+}
+
+button:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+    /* Sombreamento brilhante */
+}
+
+#orcamento {
+    width: 50%;
+    background-color: #333;
+    /* Cinza escuro */
+
+}
+
+#orcamento img {
+    margin-right: 68px;
+}
+
+
+#orcamento:hover {
+    background-color: #1a1a1a;
+    /* Cinza mais escuro no hover */
+    color: #f0f0f0;
+    /* Texto levemente mais claro no hover */
+    transform: translateY(-2px);
+    /* Efeito de levantar o botão */
+}
+
+#whatsapp {
+    background-color: #25D366;
+    /* Verde WhatsApp */
+    width: 50%;
+}
+
+#whatsapp:hover {
+    background-color: #1ebe57;
+    /* Verde mais escuro no hover */
+    color: #f0f0f0;
+    /* Texto levemente mais claro no hover */
+    transform: translateY(-2px);
+    /* Efeito de levantar o botão */
+}
+
+#instagram {
+    background-color: #C13584;
+    /* Roxo Instagram */
+    width: 50%;
+}
+
+#instagram:hover {
+    background-color: #a12b6e;
+    /* Roxo mais escuro no hover */
+    color: #f0f0f0;
+    /* Texto levemente mais claro no hover */
+    transform: translateY(-2px);
+    /* Efeito de levantar o botão */
+}
+
+/* Adicionando um efeito de brilho em hover para todos os botões */
+button:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+    /* Sombreamento brilhante */
+}
+
+#company-phone {
+    font-weight: bold;
+    font-size: 1.2rem;
+    /* tamanho relativo */
+    color: #f0f0f0;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+        /* tamanho menor em telas menores */
+    }
+
+    p {
+        font-size: 1.2rem;
+        /* tamanho menor em telas menores */
+    }
+
+    button {
+        font-size: 0.9rem;
+        /* tamanho menor em telas menores */
+        padding: 10px 15px;
+        /* ajuste no padding */
+    }
+
+    .flyer-container,
+    .about-container {
+        width: 95%;
+        /* largura responsiva */
+        margin: 10px;
+        /* menor margem em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+        /* tamanho ainda menor em telas muito pequenas */
+    }
+
+    p {
+        font-size: 1rem;
+        /* tamanho ainda menor em telas muito pequenas */
+    }
+
+    button {
+        width: 100%;
+        /* botões ocupam toda a largura em telas pequenas */
+        margin: 5px 0;
+        /* margem vertical */
+    }
+}

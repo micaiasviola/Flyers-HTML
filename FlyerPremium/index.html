@@ -14,11 +14,8 @@
 </head>
 
 <body>
-    <div class="image-container"></div> <!--Div para imagens de fundo-->
     <div class="flyer-container">
-
         <p class="felipo">Felipo Pedote Socials</p>
-
         <div class="contact-section">
             <div class="button-container">
                 <button id="whatsapp" onclick="redirectToWhatsApp()">
@@ -27,19 +24,33 @@
                 </button>
             </div>
             <div class="button-container">
-                <button id="instagram" onclick="redirectToWebsite()"><img src="./imgs/instaicon.svg"
-                        alt="Instagram">Instagram</button>
+                <button id="instagram" onclick="redirectToWebsite()">
+                    <img src="./imgs/instaicon.svg" alt="Instagram" /> Instagram
+                </button>
             </div>
             <button id="orcamento" onclick="">
-                <img src="./imgs/dollar_sign.svg" alt="Cursos">Cursos
+                <img src="./imgs/dollar_sign.svg" alt="Cursos"> Cursos
             </button>
-
         </div>
-
-
     </div>
 
+    <div class="about-container">
+        <h1>Sobre</h1>
+        <div class="carousel">
+            <div class="carousel-images">
+                <img src="./imgs/imagem1.jpg" alt="Imagem 1">
+                <img src="./imgs/imagem2.jpg" alt="Imagem 2">
+                <img src="./imgs/imagem3.jpg" alt="Imagem 3">
+            </div>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button> <!-- Botão "next" primeiro -->
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button> <!-- Botão "prev" segundo -->
+        </div>
     </div>
 </body>
+
+<footer class="footer">
+    <p>&copy; 2024 Felipo Pedote Socials. Todos os direitos reservados.</p>
+</footer>
+>
 
 </html>
